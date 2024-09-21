@@ -15,6 +15,7 @@
             line-height: 1.6;
             color: #333;
             background-color: #f4f4f4;
+            padding-top: 80px; /* Add padding to account for fixed header */
         }
         .container {
             max-width: 1100px;
@@ -25,6 +26,12 @@
             background-color: #2c3e50;
             color: #ecf0f1;
             padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         h1 {
             font-size: 2.5rem;
@@ -79,7 +86,26 @@
         a:hover {
             text-decoration: underline;
         }
+        .cv-link {
+            text-align: center;
+        }
+        .cv-link a {
+            display: inline-block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cv-link a:hover {
+            background-color: #2980b9;
+            text-decoration: none;
+        }
         @media (max-width: 768px) {
+            body {
+                padding-top: 100px; /* Increase padding for smaller screens */
+            }
             h1 {
                 font-size: 2rem;
             }
@@ -156,7 +182,13 @@
         <section id="skills">
             <h2>Skills</h2>
             <ul id="skills-list"></ul>
-        </div>
+        </section>
+
+        <section id="cv-link" class="cv-link">
+            <h2>Download CV</h2>
+            <p>For a more detailed view of my professional experience and skills, please download my CV.</p>
+            <a href="https://drive.google.com/file/d/11ZTZww7zyEGq_F1Q_PtT5BK1_g3HZtzu/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a>
+        </section>
     </main>
 
     <footer>
